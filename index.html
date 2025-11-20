@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Travel Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Optional: Basic body styling to ensure full height and nice background */
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        background-color: #FFF8E1; /* Light yellow/cream from palette */
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align content to the top initially */
+        padding: 2rem 0; /* Add some padding on top/bottom */
+      }
+      #root {
+        width: 100%;
+        max-width: 1200px; /* Max width for content */
+      }
+      /* Custom slider track styles */
+      input[type="range"]::-webkit-slider-runnable-track {
+        background: #D1D5DB; /* Light gray track */
+        height: 8px;
+        border-radius: 4px;
+      }
+      input[type="range"]::-moz-range-track {
+        background: #D1D5DB;
+        height: 8px;
+        border-radius: 4px;
+      }
+      /* Custom slider thumb styles */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #F6E05E; /* Yellow/Gold thumb */
+        border-radius: 50%;
+        cursor: grab;
+        margin-top: -6px; /* Center thumb vertically */
+        box-shadow: 0 0 0 3px rgba(246, 224, 94, 0.5); /* Focus ring effect */
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #F6E05E;
+        border-radius: 50%;
+        cursor: grab;
+        box-shadow: 0 0 0 3px rgba(246, 224, 94, 0.5);
+      }
+      input[type="range"]:focus::-webkit-slider-thumb {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.5); /* Light blue focus */
+      }
+      input[type="range"]:focus::-moz-range-thumb {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.5); /* Light blue focus */
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
